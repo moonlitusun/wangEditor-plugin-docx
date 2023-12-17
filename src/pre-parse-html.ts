@@ -22,6 +22,8 @@ const FONT_SIZE_MAP_FOR_V4 = {
  */
 function preParse(elem: DOMElement): DOMElement {
   const $elem = $(elem)
+  // console.log($elem, '$elem')
+
   // console.log($elem[0], $elem.attr('outerHTML'), '$font');
 
   // $elem.empty();

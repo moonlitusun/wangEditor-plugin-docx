@@ -106,6 +106,8 @@ export function getStyleValue($elem: Dom7Array, styleKey: string): string {
 
   const styleStr = $elem.attr('style') || '' // 如 'line-height: 2.5; color: red;'
   const styleArr = styleStr.split(';') // 如 ['line-height: 2.5', ' color: red', '']
+  console.log($elem, styleStr, 'styleArr');
+
   const length = styleArr.length
   for (let i = 0; i < length; i++) {
     const styleItemStr = styleArr[i] // 如 'line-height: 2.5'

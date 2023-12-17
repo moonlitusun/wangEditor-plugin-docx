@@ -27,18 +27,19 @@ function isMatch($text: Dom7Array, selector: string): boolean {
 
 export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomEditor): any {
   const $text = $(text)
+  console.log($text, Text.isText(node), $text.attr('style'), '$teext')
   if (!Text.isText(node)) return node
 
   const textNode = node as ColorText
   const textNodeList: ColorText[] = []
 
   function recursiveTraversal(ele: Dom7Array, cb: (ele: Dom7Array) => void) {
+    const { nodeName, childNodes } = ele[0]
+
     if (ele.children().length === 0) {
       cb(ele)
       return
     }
-
-    const { nodeName, childNodes } = ele[0]
 
     if (nodeName.toLowerCase() === 'span' && childNodes.length > 1) {
       cb(ele)
@@ -75,6 +76,8 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
       })
       return
     }
+
+    cb(ele)
     ele.children().forEach((childEle: Element) => {
       cb($(childEle))
       recursiveTraversal($(childEle), cb)
@@ -96,6 +99,8 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
     }
 
     const fontSize = getStyleValue($ele, 'font-size')
+
+    console.log(fontSize, 'fontSize')
 
     if (fontSize) {
       textNode.fontSize = fontSize

@@ -12,7 +12,6 @@ function parseHtml(elem: DOMElement, children: Descendant[], editor: IDomEditor)
   //   return false
   // })
 
-  // // 无 children ，则用纯文本
   // if (children.length === 0) {
   //   children = [{ text: $elem.text().replace(/\s+/gm, ' ') }]
   // }
