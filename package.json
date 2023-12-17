@@ -1,10 +1,10 @@
 {
   "name": "wangeditor-plugin-docx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "wangEditor plugin docx",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangeditor-team/wangEditor-plugin-formula.git"
+    "url": "git+https://github.com/moonlitusun/wangEditor-plugin-docx.git"
   },
   "keywords": [
     "docx",
