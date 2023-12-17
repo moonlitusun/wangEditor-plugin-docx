@@ -27,7 +27,6 @@ function isMatch($text: Dom7Array, selector: string): boolean {
 
 export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomEditor): any {
   const $text = $(text)
-  console.log($text, Text.isText(node), $text.attr('style'), '$teext')
   if (!Text.isText(node)) return node
 
   const textNode = node as ColorText
@@ -100,8 +99,6 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
 
     const fontSize = getStyleValue($ele, 'font-size')
 
-    console.log(fontSize, 'fontSize')
-
     if (fontSize) {
       textNode.fontSize = fontSize
     }
@@ -112,6 +109,8 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
       textNode.bgColor = bgColor
     }
   })
+
+  // console.log(textNodeList, textNode, 'ttt')
 
   if (textNodeList.length) {
     textNodeList.forEach(item => {

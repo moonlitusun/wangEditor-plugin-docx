@@ -2,7 +2,7 @@
 
 ## 介绍
 
-[wangEditor](https://www.wangeditor.com/) 公式插件，支持从Microsoft Word/WPS粘贴过来保留样式。
+[wangEditor](https://www.wangeditor.com/) word插件，支持从Microsoft Word/WPS粘贴过来保留样式。
 
 <!-- ![](./_img/demo.png) -->
 
