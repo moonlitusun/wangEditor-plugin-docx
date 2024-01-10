@@ -6,8 +6,6 @@ export type ColorText = {
   text: string
   color?: string
   bgColor?: string
-  fontSize?: string
-  fontFamily?: string
 }
 
 /**
@@ -44,15 +42,13 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
       cb(ele)
 
       childNodes.forEach(child => {
-        const { textContent } = child
+        const { textContent, nodeType } = child
         const textObj: any = {
           text: textContent,
         }
-
-        const { nodeType } = child
         if (nodeType === 3) {
           textNodeList.push(textObj)
-        } else {
+        } else if (nodeType === 1) {
           const $text = $(child)
 
           // bold
@@ -91,18 +87,6 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
       textNode.color = color
     }
 
-    const fontFamily = getStyleValue($ele, 'font-family')
-
-    if (fontFamily) {
-      textNode.fontFamily = fontFamily
-    }
-
-    const fontSize = getStyleValue($ele, 'font-size')
-
-    if (fontSize) {
-      textNode.fontSize = fontSize
-    }
-
     let bgColor = getStyleValue($ele, 'background-color')
     if (!bgColor) bgColor = getStyleValue($ele, 'background') // word 背景色
     if (bgColor) {
@@ -115,8 +99,6 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
   if (textNodeList.length) {
     textNodeList.forEach(item => {
       if (textNode.color) item.color = textNode.color
-      if (textNode.fontFamily) item.fontFamily = textNode.fontFamily
-      if (textNode.fontSize) item.fontSize = textNode.fontSize
       if (textNode.bgColor) item.bgColor = textNode.bgColor
     })
 

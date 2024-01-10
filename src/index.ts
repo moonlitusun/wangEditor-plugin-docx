@@ -5,7 +5,7 @@ import { parseStyleHtml } from './parseStyleHtml'
 
 const docx: Partial<IModuleConf> = {
   parseStyleHtml,
-  preParseHtml: [preParseHtmlConf],
+  // preParseHtml: [preParseHtmlConf],
   // parseElemsHtml: [dividerToHtmlConf],
 }
 

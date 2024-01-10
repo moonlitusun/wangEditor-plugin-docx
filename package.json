@@ -106,10 +106,5 @@
     "dom7": "^4.0.4",
     "slate": "^0.72.0",
     "nanoid": "^3.2.0"
-  },
-  "dependencies": {
-    "@udecode/plate-juice": "^27.0.0",
-    "@udecode/plate-serializer-docx": "^27.0.0",
-    "juice": "^10.0.0"
   }
 }
