@@ -52,7 +52,7 @@ export function parseStyleHtml(text: DOMElement, node: Descendant, editor: IDomE
         const { nodeType } = child
         if (nodeType === 3) {
           textNodeList.push(textObj)
-        } else {
+        } else if (nodeType === 1) {
           const $text = $(child)
 
           // bold
