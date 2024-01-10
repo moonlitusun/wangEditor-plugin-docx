@@ -1,6 +1,6 @@
 {
   "name": "wangeditor-plugin-docx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "wangEditor plugin docx",
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
     "format": "yarn prettier --write",
     "lint": "eslint \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
     "lint-fix": "eslint --fix \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
-    "prettier": "prettier --write --config .prettierrc.js \"{src,test,cypress,build,example}/**/*.{js,ts}\""
+    "prettier": "prettier --write --config .prettierrc.js \"{src,test,cypress,build,example}/**/*.{js,ts}\"",
+    "pub": "yarn build && npm publish --registry='https://registry.npmjs.org'"
   },
   "lint-staged": {
     "*.{ts,tsx,js}": [
