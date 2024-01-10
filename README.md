@@ -31,3 +31,5 @@ import docxPlugin from 'wangeditor-plugin-docx'
 // 注意，要在创建编辑器之前注册，且只能注册一次，不可重复注册。
 Boot.registerModule(docxPlugin)
 ```
+
+*说明：本插件并没有支持所有的元素，比如table中的样式，如果有需要支持的可以考虑提feature*
