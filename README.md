@@ -17,6 +17,10 @@ After
 ## 安装
 
 ```shell
+# pnpm
+pnpm install wangeditor-plugin-docx
+
+# yarn
 yarn add wangeditor-plugin-docx
 ```
 
